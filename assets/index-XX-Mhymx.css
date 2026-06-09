@@ -1,0 +1,1 @@
+.container{display:flex;align-items:flex-end;overflow-x:visible;height:60vh;width:90vw;margin-top:5em;border:solid 1px gray;padding:1em;max-width:min-content;margin-left:auto;margin-right:auto}.container-item{width:15px;min-width:5px;margin-right:.1em;margin-left:.1em;background-color:#07b7b3;color:#fff;text-align:center}.active-item{background-color:#2bff00!important}
