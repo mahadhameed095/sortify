@@ -53,3 +53,4 @@ The project has the following folder structure:
 
 ## Contributions
 Contributions are welcome! If you would like to add a new sorting algorithm or make any other improvements to the project, please feel free to submit a pull request.
+
