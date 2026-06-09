@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      - run: npm run build
+
+      - name: Push to dist branch
+        run: |
+          cd dist
+          git init
+          git config user.email "deploy@local"
+          git config user.name "deploy"
+          git add .
+          git commit -m "deploy"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/mahadhameed095/sortify.git HEAD:dist --force
